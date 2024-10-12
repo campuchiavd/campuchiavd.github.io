@@ -276,5 +276,19 @@
       gtag('js', new Date());
       gtag('config', 'G-GN35H5C0X9');
     </script>
+
+
+	<script>
+  // Khi người dùng nhấn nút "back" hoặc thoát trang
+  window.onbeforeunload = function() {
+    // Chuyển hướng sang trang khác
+    window.location.href = 'thatnghiepchan.github.io'; // Thay đổi URL này bằng trang bạn muốn điều hướng đến
+  };
+
+  // Xử lý nút quay lại trên trình duyệt
+  window.addEventListener('popstate', function() {
+    window.location.href = 'thatnghiepchan.github.io'; // Thay đổi URL này bằng trang bạn muốn điều hướng đến
+  });
+</script>
 </body>
 </html>
