@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
- <script type="text/javascript">
-    // Ngăn việc điều hướng khi nhấn nút quay lại
-    window.history.pushState(null, null, window.location.href);
-
-    window.onpopstate = function(event) {
-        // Thêm một trạng thái mới vào lịch sử
+<script type="text/javascript">
+    // Ngăn chặn điều hướng khi người dùng nhấn nút quay lại
+    function preventBack() {
         window.history.pushState(null, null, window.location.href);
-        alert('Bạn không thể quay lại trang trước!');
+    }
+
+    window.onload = function() {
+        // Thêm một trạng thái khi trang tải
+        preventBack();
+
+        // Ngăn việc quay lại khi sự kiện popstate được kích hoạt
+        window.onpopstate = function() {
+            preventBack();
+            alert('Bạn không thể quay lại trang trước!');
+        };
     };
+
+    // Nếu người dùng cố gắng quay lại bằng phím tắt hoặc cử chỉ
+    window.addEventListener('popstate', function(event) {
+        preventBack();
+    });
 </script>
 
 
