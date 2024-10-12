@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script>
-  // Khi người dùng nhấn nút "back" hoặc thoát trang
-  window.onbeforeunload = function() {
-    // Chuyển hướng sang trang khác
-    window.location.href = 'thatnghiepchan.github.io'; // Thay đổi URL này bằng trang bạn muốn điều hướng đến
-  };
-
-  // Xử lý nút quay lại trên trình duyệt
-  window.addEventListener('popstate', function() {
-    window.location.href = 'thatnghiepchan.github.io'; // Thay đổi URL này bằng trang bạn muốn điều hướng đến
-  });
-</script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARE YOU SAD ?</title>
@@ -176,30 +163,27 @@
     </style>
 </head>
 <body>
-  
-	<h1>.</h1>  <div style="height:100px;width:100px; margin-top: 300px;">
+    <h1>.</h1>  <div style="height:100px;width:100px; margin-top: 300px;">
 		
 		
-       <script async="async" data-cfasync="false" src="//pl24644880.cpmrevenuegate.com/33a8303fab2f54b988f43d0115377738/invoke.js"></script>
-<div id="container-33a8303fab2f54b988f43d0115377738"></div>
-	
-	
-	</div>
-	
-	
-	
-	<br> <br> <br> <br>
-    
+        <script async="async" data-cfasync="false" src="//pl24644880.cpmrevenuegate.com/33a8303fab2f54b988f43d0115377738/invoke.js"></script>
+ <div id="container-33a8303fab2f54b988f43d0115377738"></div>
+     
+     
+     </div>
+     
+     
+     
+     <br> <br> <br> <br>
     <div id="overlay" class="overlay">
         <div class="overlay-body">
-            <br> <br> <br> 
             <p class="overlay-title">THIS CONTENT IS SUITABLE FOR YOU</p>
             <p>I WANT TO REMIND YOU !</p>
             <p class="overlay-description">Please note that this content is not suitable for the elderly, those with a weak heart, underlying medical conditions, or unstable mental health!</p>
             <div class="overlay-buttons-wrapper">
                 <div id="accept-button" class="overlay-button">Open</div>
-                <div id="decline-button" class="overlay-button">Can't Resist the Curiosity </div>
-            </div>            
+                <div id="decline-button" class="overlay-button">Can</div>
+            </div>         
             <hr>
             <br>
             <script type="text/javascript">
@@ -212,21 +196,21 @@
                 };
             </script>
             <script type="text/javascript" src="//www.topcpmcreativeformat.com/2db4631e61e4361ab353e5c4f04e678d/invoke.js"></script>
-		<br>
+		<br>   
             <div class="report-section">
                 <p>YOU LIKE THIS VIDEO ?</p>
-                <a href="https://thatnghiepchan.github.io/Ad.html" target="_blank" class="overlay-link"> SEE MORE </a>
-		    <br>
-                <a href="https://vietnamvd.github.io/" target="_blank" class="overlay-link"> HOME </a>
+                <a href="https://thatnghiepchan.github.io/Ad.html" target="_blank" class="overlay-link">SEE MORE</a>
+                <br>
+                <a href="https://vietnamvd.github.io/" target="_blank" class="overlay-link">HOME</a>
             </div>
-            <hr>
-            <p style="color:red">Share this website with your friends : https://thatnghiepchan.github.io</p>
-            <p style="color:red">Share this website with your friends  <a href="https://vietnamvd.github.io/" style="color:red;">https://thatnghiepchan.github.io</a></p>
-	</div>
+            <p style="color:red">Share this website with your friends: <a href="https://thatnghiepchan.github.io" style="color:red;">https://thatnghiepchan.github.io</a></p>
+        </div>
     </div>
+
     <div class="scare">
         <video id="video" class="video" src="video.mp4" loop controls></video>
     </div>
+
     <script type="text/javascript">
         const video = document.getElementById("video");
         const overlay = document.getElementById("overlay");
@@ -235,46 +219,70 @@
 
         let hasClicked = false;
 
+        // Khi người dùng rời khỏi trang
         window.onbeforeunload = function() {
-            if(hasClicked) return true;
+            if (hasClicked) return true;
         };
 
         function buttonClick(event) {
             event.preventDefault();
-            if(!hasClicked) hasClicked = true;
-            overlay.style.display = 'none'; // Hide overlay
-            document.querySelector('.scare').style.display = 'block'; // Show video
+            if (!hasClicked) hasClicked = true;
+
+            overlay.style.display = 'none'; // Ẩn overlay
+            document.querySelector('.scare').style.display = 'block'; // Hiển thị video
+
             video.play().then(() => {
-                // Video playback started successfully
-                console.log('Video playback started');
+                // Phát video thành công
+                alert('Video is starting!'); // Hiển thị thông báo khi phát video
             }).catch((error) => {
-                // Handle video playback error
+                // Xử lý lỗi khi phát video
                 console.error('Error attempting to play video:', error);
             });
-            videoClick();
+
+            enterFullscreen();
         }
 
-        function videoClick(event) {
-            if(event) event.preventDefault();
+        function enterFullscreen(event) {
+            if (event) event.preventDefault();
             const { documentElement } = document;
-            if(documentElement.requestFullscreen) documentElement.requestFullscreen();
-            else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
-            else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
-            else if(documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
+            if (documentElement.requestFullscreen) documentElement.requestFullscreen();
+            else if (documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
+            else if (documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
+            else if (documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
         }
 
+        function exitFullscreen() {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        }
+
+        function resetOverlay() {
+            // Ẩn video, hiển thị lại overlay
+            overlay.style.display = 'flex';
+            document.querySelector('.scare').style.display = 'none';
+            alert('Video has ended. Returning to the main page.'); // Hiển thị thông báo khi video kết thúc
+        }
+
+        // Xử lý khi video kết thúc
+        video.addEventListener('ended', () => {
+            exitFullscreen();
+            resetOverlay();
+        });
+
+        // Xử lý khi người dùng thoát fullscreen
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                resetOverlay(); // Hiển thị lại overlay khi thoát fullscreen
+            }
+        });
+
+        // Gắn sự kiện cho các nút
         acceptButton.addEventListener("click", buttonClick);
         declineButton.addEventListener("click", buttonClick);
-        video.addEventListener("click", videoClick);
+        video.addEventListener("click", enterFullscreen);
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN35H5C0X9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GN35H5C0X9');
-    </script>
 </body>
 </html>
