@@ -4,8 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YOU WILL LIKE IT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(135deg, #000000, #ff0000);
+      color: #ffffff;
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+      }
+      50% {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+      }
+    }
+    a {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #000000;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    a:hover {
+      transform: scale(1.1);
+      background-color: #ffcccc;
+    }
+    p {
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+    .floating-box {
+      position: relative;
+      max-width: 400px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      color: #000;
+      text-align: center;
+      animation: float 3s infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
 </head>
 <body>
-  <a href="https://tophorrortales.blogspot.com/">HÚ HỒN</a>
+  <div class="container">
+    <h1>Are you ready to experience an adrenaline rush?</h1>
+    <a href="https://tophorrortales.blogspot.com/">Discover Now</a>
+    <p>This content is not for the faint-hearted, it might give you chills.</p>
+  </div>
+
+  <div class="floating-box">
+    <h1>Are you ready to experience calm and serenity?</h1>
+    <a href="https://tophorrortales.blogspot.com/">Explore Peace</a>
+  </div>
 </body>
 </html>
